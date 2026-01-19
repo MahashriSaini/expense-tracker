@@ -2,6 +2,13 @@
 import Expense from "./Expense";
 
 export default function ExpenseList({ expenses }) {
+  if(expenses.length === 0)
+  {
+    return (<>
+      <p className="no-transaction">No transactions yet!</p>
+      </>
+    );
+  }
   return (
     <>
       {expenses.map((item) => (

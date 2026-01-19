@@ -34,6 +34,31 @@ export function Overview({ expenses }) {
 }
 
 
+export function Search({ expenses }) {
+  const [searchInput, setSearchInput] = useState("");
+
+  // Filter expenses dynamically
+  const filteredExpenses = expenses.filter((item) =>
+    item.title.toLowerCase().includes(searchInput.trim().toLowerCase())
+  );
+
+  return (
+    <><div className="search-container">
+      <input
+        type="text"
+        placeholder="Search Transaction"
+        className="search-transaction"
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
+      <h4 className="transaction-heading">Transactions</h4>
+      {/* If search is empty, filteredExpenses === all expenses */}
+      <ExpenseList expenses={filteredExpenses} />
+      </div>
+    </>
+  );
+}
+
 function App() {
   const [expense, setExpense] = useState({
     title: "",
@@ -52,8 +77,8 @@ function App() {
   };
 
   const updateType = (e) => {
-    setExpense({...expense, type: e.target.value })
-  }
+    setExpense({ ...expense, type: e.target.value });
+  };
 
   const addButtonClick = () => {
     if (!expense.title || !expense.amount) return;
@@ -66,7 +91,7 @@ function App() {
   return (
     <>
       <h1 className="app-title">Expense Tracker</h1>
-      <Overview expenses={expenses}/>
+      <Overview expenses={expenses} />
       <div className="input-container">
         <input
           type="text"
@@ -84,7 +109,7 @@ function App() {
           className="input"
         />
 
-        <select onChange = {updateType}>
+        <select onChange={updateType}>
           <option value="Expense">Expense</option>
           <option value="Income">Income</option>
         </select>
@@ -93,8 +118,9 @@ function App() {
           Add
         </button>
       </div>
-
-      <ExpenseList expenses={expenses} />
+      <Search expenses = {expenses}/>
+      
+      {/* <ExpenseList expenses={expenses} /> */}
     </>
   );
 }

@@ -55,7 +55,35 @@ body {
   background-color: #4338ca;
 }
 
+/* Search section */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* horizontal center */
+  margin: 20px 0;
+}
+
+.search-transaction {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
 /* Expense list */
+.transaction-heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-transaction {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 15px;
+}
+
 .expense-item {
   display: flex;
   justify-content: space-between;
