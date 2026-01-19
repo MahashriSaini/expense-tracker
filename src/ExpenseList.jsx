@@ -10,13 +10,14 @@ export default function ExpenseList({ expenses }) {
     );
   }
   return (
-    <>
+    <><div>
       {expenses.map((item) => (
         <Expense
           key={item.id}
           item = {item}
         />
       ))}
+      </div>
     </>
   );
 }

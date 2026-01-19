@@ -1,0 +1,14 @@
+#income-heading {
+    display: flex;
+    justify-content: space-between;
+    margin:30px;
+}
+
+#income-main {
+    display:flex;
+    justify-content: space-between;
+}
+
+#recent-income {
+    margin:30px
+}

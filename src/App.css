@@ -12,6 +12,11 @@ body {
   padding: 40px;
 }
 
+#main {
+  display: flex;
+  justify-content=flex-start;
+}
+
 /* Title */
 .app-title {
   text-align: center;

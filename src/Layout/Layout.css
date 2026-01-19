@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f6fa;
+  overflow-y: auto;
+}
