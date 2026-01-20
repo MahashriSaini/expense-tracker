@@ -19,19 +19,19 @@ ChartJS.register(
   Legend
 );
 
-export default function IncomeChart({ incomeList }) {
-  const sortedIncome = [...incomeList].sort(
+export default function AnalysisChart({ transactions, transactionType }) {
+  const sortedTransactions = [...transactions].sort(
     (a, b) => new Date(a.date) - new Date(b.date)
   );
 
   const data = {
-    labels: sortedIncome.map(item =>
+    labels: sortedTransactions.map(item =>
       new Date(item.date).toLocaleDateString()
     ),
     datasets: [
       {
-        label: "Income",
-        data: sortedIncome.map(item => item.amount),
+        label: transactionType,
+        data: sortedTransactions.map(item => item.amount),
         borderWidth: 2,
         tension: 0.4
       }

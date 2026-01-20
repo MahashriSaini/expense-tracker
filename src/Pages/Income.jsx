@@ -1,9 +1,9 @@
 import ExpenseList from "../ExpenseList.jsx";
-import IncomeChart from "../Charts/IncomeChart.jsx";
+import AnalysisChart from "../Charts/AnalysisChart.jsx";
 import MonthChart from "../Charts/MonthChart.jsx";
 import "./Income.css";
 
-export default function Income({ transactions }) {
+export default function Income({ transactions}) {
   const incomeList = transactions.filter((item) => item.type === "Income");
 
   const totalIncome = incomeList.reduce(
@@ -13,7 +13,7 @@ export default function Income({ transactions }) {
 
   return (
     <>
-      <IncomeChart incomeList={incomeList} />
+      <AnalysisChart transactions={incomeList} transactionType={"income"} />
       <div id="income-heading">
         <h2>Income</h2>
         <h3>{totalIncome}</h3>
