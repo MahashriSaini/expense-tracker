@@ -1,3 +1,6 @@
+// Charts/ AnalysisChart.jsx
+import "./AnalysisChart.css"
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -32,6 +35,8 @@ export default function AnalysisChart({ transactions, transactionType }) {
       {
         label: transactionType,
         data: sortedTransactions.map(item => item.amount),
+        borderColor: transactionType === "income" ? "#16a34a" : "#dc2626",
+        backgroundColor: "transparent",
         borderWidth: 2,
         tension: 0.4
       }
@@ -40,6 +45,7 @@ export default function AnalysisChart({ transactions, transactionType }) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true
@@ -61,5 +67,10 @@ export default function AnalysisChart({ transactions, transactionType }) {
     }
   };
 
-  return <Line data={data} options={options} />;
+  return (
+    <>
+  <div className="chart-wrapper">
+  <Line data={data} options={options} />
+</div>
+  </>);
 }

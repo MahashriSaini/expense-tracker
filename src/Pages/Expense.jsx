@@ -1,3 +1,5 @@
+// Pages/Exepnse.jsx
+
 import ExpenseList from "../ExpenseList.jsx";
 import AnalysisChart from "../Charts/AnalysisChart.jsx";
 import MonthChart from "../Charts/MonthChart.jsx";

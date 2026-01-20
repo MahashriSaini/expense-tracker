@@ -1,0 +1,23 @@
+/* index.css */
+:root {
+  --primary: #0C2C55;
+  --secondary: #296374;
+  --accent: #629FAD;
+  --bg-light: #EDEDCE;
+  --text-dark: #0f172a;
+
+  --income: #16a34a;
+  --expense: #dc2626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}

@@ -1,7 +1,8 @@
+// Charts/MonthChart.jsx
 import "./MonthChart.css";
 
 export default function MonthChart({ transactions, transactionType }) {
-  // 2️⃣ Group & sum by month-year
+  // Group & sum by month-year
   const monthMap = transactions.reduce((acc, item) => {
     const date = new Date(item.date);
 
@@ -19,7 +20,7 @@ export default function MonthChart({ transactions, transactionType }) {
     return acc;
   }, {});
 
-  // 3️⃣ Convert to array (useful for charts)
+  // Convert to array (useful for charts)
   const monthWiseData = Object.entries(monthMap).map(([month, total]) => ({
     month,
     total,

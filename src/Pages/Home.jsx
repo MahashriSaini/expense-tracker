@@ -1,7 +1,10 @@
+// Pages/Home.jsx
+
 import { useState } from "react";
 import {v4 as uuidv4} from "uuid";
 import "../App.css";
 import ExpenseList from "../ExpenseList";
+import "./Home.css"
 
 export default function Home({transactions, setTransactions}) {
   const [expense, setExpense] = useState({

@@ -1,3 +1,4 @@
+// components/Sidebar.jsx
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import userImg from "../assets/react.svg";

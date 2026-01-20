@@ -1,11 +1,12 @@
+/* Charts/ MonthChart.css */
+
 .monthchart-container {
   background-color: #ffffff;
   padding: 16px 20px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   margin-top: 20px;
-  width: 40%
-  /* max-width: 1000px; */
+  width: 40%;
 }
 
 .monthchart-title {
@@ -52,9 +53,9 @@
 }
 
 .amount.income {
-  color: #2ecc71; /* green */
+  color: var(--income);
 }
 
 .amount.expense {
-  color: #e74c3c; /* red */
+  color: var(--expense);
 }

@@ -1,3 +1,4 @@
+// Pages/Logout.jsx
 export default function Logout() {
   return (
     <>
